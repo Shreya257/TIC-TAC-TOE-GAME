@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #ff5f6d, #ffc371, #c2e59c, #64b3f4, #c2e59c, #ffc371, #ff5f6d);
+  background-size: 200% 200%; 
+  animation: gradientBG 15s ease infinite;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  position: relative; /*Ensure positioning context for pseudo-elements*/
+}
+
+.container {
+  display: flex;
+  background: rgba(255, 255, 255, 0.2); /*Semi-transparent white background*/
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 600px;
+  min-height: 400px;
+  border-radius: 10%;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /*Soft shadow*/
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+  border-radius: 5px;
+}
+
+td {
+  background-color: #ff5f6d;
+  border-radius: 15px;
+  border-color: transparent;
+  font-size: 70px;
+  font-family:'Courier New', Courier, monospace;
+  font-style: normal;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+#player {
+  padding: 1rem;
+  font-family:'Courier New', Courier, monospace;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.5); /*Semi-transparent white background*/
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*Soft shadow*/
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  background-color: yellow;
+  padding: 3.5px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1500; /* To Ensure it's above other content */
+}
